@@ -14,7 +14,6 @@ import { ThemeMode } from '@renderer/types'
 import { isEmoji } from '@renderer/utils'
 import { Avatar, Tooltip } from 'antd'
 import {
-  Code,
   FileSearch,
   Folder,
   Languages,
@@ -22,7 +21,6 @@ import {
   MessageSquare,
   Monitor,
   Moon,
-  NotepadText,
   Palette,
   Settings,
   Sparkle,
@@ -137,9 +135,9 @@ const MainMenus: FC = () => {
     translate: <Languages size={18} className="icon" />,
     minapp: <LayoutGrid size={18} className="icon" />,
     knowledge: <FileSearch size={18} className="icon" />,
-    files: <Folder size={18} className="icon" />,
-    notes: <NotepadText size={18} className="icon" />,
-    code_tools: <Code size={18} className="icon" />
+    files: <Folder size={18} className="icon" />
+    // notes: <NotepadText size={18} className="icon" />,
+    // code_tools: <Code size={18} className="icon" />
   }
 
   const pathMap = {
@@ -149,9 +147,9 @@ const MainMenus: FC = () => {
     translate: '/translate',
     minapp: '/apps',
     knowledge: '/knowledge',
-    files: '/files',
-    code_tools: '/code',
-    notes: '/notes'
+    files: '/files'
+    // code_tools: '/code',
+    // notes: '/notes'
   }
 
   return sidebarIcons.visible.map((icon) => {

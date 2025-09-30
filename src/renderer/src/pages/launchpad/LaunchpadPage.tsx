@@ -2,7 +2,7 @@ import App from '@renderer/components/MinApp/MinApp'
 import { useMinapps } from '@renderer/hooks/useMinapps'
 import { useRuntime } from '@renderer/hooks/useRuntime'
 import { useSettings } from '@renderer/hooks/useSettings'
-import { Code, FileSearch, Folder, Languages, LayoutGrid, NotepadText, Palette, Sparkle } from 'lucide-react'
+import { FileSearch, Folder, Languages, Palette, Sparkle } from 'lucide-react'
 import { FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
@@ -16,12 +16,12 @@ const LaunchpadPage: FC = () => {
   const { openedKeepAliveMinapps } = useRuntime()
 
   const appMenuItems = [
-    {
-      icon: <LayoutGrid size={32} className="icon" />,
-      text: t('title.apps'),
-      path: '/apps',
-      bgColor: 'linear-gradient(135deg, #8B5CF6, #A855F7)' // 小程序：紫色，代表多功能和灵活性
-    },
+    // {
+    //   icon: <LayoutGrid size={32} className="icon" />,
+    //   text: t('title.apps'),
+    //   path: '/apps',
+    //   bgColor: 'linear-gradient(135deg, #8B5CF6, #A855F7)' // 小程序：紫色，代表多功能和灵活性
+    // },
     {
       icon: <FileSearch size={32} className="icon" />,
       text: t('title.knowledge'),
@@ -51,19 +51,19 @@ const LaunchpadPage: FC = () => {
       text: t('title.files'),
       path: '/files',
       bgColor: 'linear-gradient(135deg, #F59E0B, #FBBF24)' // 文件：金色，代表资源和重要性
-    },
-    {
-      icon: <Code size={32} className="icon" />,
-      text: t('title.code'),
-      path: '/code',
-      bgColor: 'linear-gradient(135deg, #1F2937, #374151)' // Code CLI：高级暗黑色，代表专业和技术
-    },
-    {
-      icon: <NotepadText size={32} className="icon" />,
-      text: t('title.notes'),
-      path: '/notes',
-      bgColor: 'linear-gradient(135deg, #F97316, #FB923C)' // 笔记：橙色，代表活力和清晰思路
     }
+    // {
+    //   icon: <Code size={32} className="icon" />,
+    //   text: t('title.code'),
+    //   path: '/code',
+    //   bgColor: 'linear-gradient(135deg, #1F2937, #374151)' // Code CLI：高级暗黑色，代表专业和技术
+    // },
+    // {
+    //   icon: <NotepadText size={32} className="icon" />,
+    //   text: t('title.notes'),
+    //   path: '/notes',
+    //   bgColor: 'linear-gradient(135deg, #F97316, #FB923C)' // 笔记：橙色，代表活力和清晰思路
+    // }
   ]
 
   // 合并并排序小程序列表

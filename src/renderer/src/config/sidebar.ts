@@ -11,9 +11,9 @@ export const DEFAULT_SIDEBAR_ICONS: SidebarIcon[] = [
   'translate',
   'minapp',
   'knowledge',
-  'files',
-  'code_tools',
-  'notes'
+  'files'
+  // 'code_tools',
+  // 'notes'
 ]
 
 /**
